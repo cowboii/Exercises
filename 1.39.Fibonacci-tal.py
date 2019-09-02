@@ -11,13 +11,23 @@ def F(n):
         res = F(n-1) + F(n-2)
         hold.append(res)
 
-    print(f"iter {n}")
     return res
+
+def f(n):
+    fib = [0,1]
+    if n:
+        for each in range(n):
+            fib.append(sum(fib[::-2]))
+        print(fib[-1])
+    else:
+        print(n)
+
 
 if __name__ == "__main__":
     try:
-        print([F(x) for x in range(int(sys.argv[1]))])
+        #print([F(x) for x in range(int(sys.argv[1]))])
         #print(F(int(sys.argv[1])))
+        #f(int(sys.argv[1]))
     except KeyboardInterrupt:
         pass
 
