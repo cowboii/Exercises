@@ -1,5 +1,4 @@
 import sys
-from time import sleep
 
 hold = []
 def F(n):
@@ -18,16 +17,16 @@ def f(n):
     if n:
         for each in range(n):
             fib.append(sum(fib[::-2]))
-        print(fib[-1])
+        return fib[-1]
     else:
-        print(n)
+        return n
 
 
 if __name__ == "__main__":
     try:
-        #print([F(x) for x in range(int(sys.argv[1]))])
         #print(F(int(sys.argv[1])))
-        #f(int(sys.argv[1]))
+        #print(f(int(sys.argv[1])))
+        print([f(x) for x in range(int(sys.argv[1])+1)])
     except KeyboardInterrupt:
         pass
 
